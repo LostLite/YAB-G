@@ -5,7 +5,7 @@
     <div>
         {% if user.is_authenticated %}
             <a href="#" class="text-white hover:underline mx-4">Welcome {{user.username}}</a>
-            <a href="/blog-list" class="text-white hover:underline mx-4">My Blogs</a>
+            <a href="{% url 'blogs' %}" class="text-white hover:underline mx-4">My Blogs</a>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
                 <button class="btn btn-link text-white hover:underline">Logout</button>
